@@ -84,7 +84,7 @@ public class Problem3 {
 		BigInteger bigIntegerNumberOne = new BigInteger("1");
 		BigInteger bigIntegerAuxValue = new BigInteger("2");
 
-		while (isPrime == true && auxNumber.compareTo(bigIntegerAuxValue) > 0 && isPrime) {
+		while (isPrime == true && auxNumber.compareTo(bigIntegerAuxValue) > 0) {
 
 			if (auxNumber.mod(bigIntegerAuxValue).equals(bigIntegerNumberZero) == false) {
 				bigIntegerAuxValue = bigIntegerAuxValue.add(bigIntegerNumberOne);
