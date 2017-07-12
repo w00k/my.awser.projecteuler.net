@@ -1,12 +1,9 @@
 package projecteuler.net;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Problem5 {
-
-	private static final String Integer = null;
 
 	public Problem5() {
 		// TODO Auto-generated constructor stub
