@@ -11,6 +11,13 @@ public class Problem5 {
 	public Problem5() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	/**
+	 * Problem 5.
+	 * 
+	 * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+	 * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+	 */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,8 +25,6 @@ public class Problem5 {
 
 		List<Integer> values = problem5.getNumber(20);
 		Integer numbersPrime = 1, numberComplex = 1;
-		
-//		System.out.println("9 : " + problem5.getBase(16));
 		
 		for (Integer i : values) {
 			
