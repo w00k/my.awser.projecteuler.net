@@ -30,16 +30,17 @@ public class Problem12 {
              Problem12 problem12 = new Problem12();
              
              Integer triangle = 0 , divisor = 0, maxNumber = 500;
-             
+
              for(Integer number=1;number <= 9000000;number++) {
                  triangle = problem12.getTriangleNumber(number);
-                 divisor = problem12.getDivisor(triangle);
+                 //divisor = problem12.getDivisor(triangle);
+                 divisor = problem12.printDivisors(triangle);
                  if(divisor >= maxNumber) {
-                     System.out.println("Number is : " + triangle + " the numbers of divisor are : " +divisor);
+                     System.out.println("\nNumber is : " + triangle + " the numbers of divisor are : " +divisor);
                      break;
                  }
              }
-             
+
          } // end main
     
     /**
@@ -55,22 +56,25 @@ public class Problem12 {
         return n;
     } //end getTriangleNumber
        
-    /**
-     * 
-     * @param number is de number for get the count of the number divisors
-     * @return the count of the number divisors
-     */
-    public Integer getDivisor(Integer number) {
-        Integer divisors = 1;
-        Integer middleNumber = number/2;
-        
-        for(Integer i = 1; middleNumber >= i; i++) {
-            if(number % i == 0) {
-                divisors++;
-            } 
-        } //end for
-        
+    public Integer printDivisors(Integer n) {
+        Integer divisors = 0;
+        // Note that this loop runs till square root
+        for (Integer i=1; i<=Math.sqrt(n); i++) {
+            if (n%i==0) {
+                // If divisors are equal, print only one
+                if (n/i == i) {
+                    //System.out.printf("%d ", i);
+                    divisors++;
+                }
+                else {
+                    // Otherwise print both
+                    //System.out.printf("%d %d ", i, n / i);
+                    divisors = divisors + 2;
+                }
+            }
+        }
+        //System.out.println("\nDivisors : " + divisors);
         return divisors;
-    } //end getDivisor
+    } //end printDivisiors
     
 }
