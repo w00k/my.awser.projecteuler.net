@@ -33,7 +33,7 @@ public class Problem12 {
 
              for(Integer number=1;number <= 9000000;number++) {
                  triangle = problem12.getTriangleNumber(number);
-                 //divisor = problem12.getDivisor(triangle);
+                 
                  divisor = problem12.printDivisors(triangle);
                  if(divisor >= maxNumber) {
                      System.out.println("\nNumber is : " + triangle + " the numbers of divisor are : " +divisor);
